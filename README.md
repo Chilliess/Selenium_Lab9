@@ -1,16 +1,11 @@
 # Báo cáo kiểm thử tự động website với Selenium
 
 ## 1. Thông tin chung
-
-| Mục | Nội dung |
-|-----|----------|
-| Sinh viên / nhóm | <họ tên, MSSV> |
-| Môn học | <tên môn> |
-| Giảng viên | <tên giảng viên> |
-| Website kiểm thử | https://www.saucedemo.com |
-| Công cụ chính | Selenium WebDriver (Python) |
-| Số test case | 6 (yêu cầu tối thiểu 5) |
-| Kết quả | 6 passed, 0 failed |
+- **Sinh viên:** Phạm Tiến Chiêu
+- **Website kiểm thử:** https://www.saucedemo.com
+- **Công cụ chính:** Selenium WebDriver (Python)
+- **Số test case:** 6 (yêu cầu tối thiểu 5)
+- **Kết quả:** 6 passed, 0 failed
 
 ## 2. Mục tiêu
 
@@ -138,30 +133,8 @@ Tổng kết: **6 test case, 6 passed, 0 failed, thời gian chạy khoảng 26 
 
 ![Báo cáo HTML](screenshots/report.png)
 
-## 11. Khó khăn gặp phải và cách khắc phục
 
-| Vấn đề | Nguyên nhân | Cách khắc phục |
-|--------|-------------|----------------|
-| `python -m pip` báo "No module named pip" | Lệnh `python` trỏ vào Python của MSYS2 thay vì Python cài từ python.org | Dùng `py -3.10 -m venv venv` để tạo môi trường ảo bằng đúng bản Python, sau đó chỉ dùng `python` trong venv |
-| pytest báo `collected 0 items` | Chưa tạo thư mục `tests` và file `test_` đúng tên | Tạo `tests/test_saucedemo.py` (tên file và tên hàm phải bắt đầu bằng `test_`) |
-| `StaleElementReferenceException` ở TC05 | Tìm nút Remove khi trang giỏ hàng còn đang tải và vẽ lại | Chờ URL `/cart.html` và phần tử xuất hiện trước khi bấm |
-| `NoSuchElementException` ở TC03 | Tìm nút Add to cart khi trang sản phẩm chưa tải xong sau khi đăng nhập | Cho hàm `login()` chờ trang sản phẩm tải xong, dùng `WebDriverWait` cho mọi thao tác bấm |
-| Popup "Change your password" của Chrome | Chrome tự hiện popup khi phát hiện đăng nhập | Tắt trình quản lý mật khẩu bằng `ChromeOptions` trong fixture |
-
-## 12. Bài học rút ra
-
-- Không nên thao tác ngay khi trang chưa tải xong; dùng chờ tường minh (`WebDriverWait`) giúp test ổn định, nhanh hơn `time.sleep()`.
-- Mỗi test cần độc lập (mỗi test mở một trình duyệt mới) để lỗi của test này không ảnh hưởng test khác.
-- Nên tách các bước lặp lại (đăng nhập, chờ, bấm) thành hàm dùng chung để code ngắn gọn, dễ bảo trì.
-- Dùng môi trường ảo (`venv`) để tránh xung đột phiên bản Python và thư viện.
-
-## 13. Hạn chế và hướng phát triển
-
-- Mới kiểm thử luồng chính trên trình duyệt Chrome, chưa chạy trên Firefox hoặc Edge.
-- Chưa kiểm thử các tài khoản đặc biệt của website (như `locked_out_user`) và chức năng thanh toán (checkout).
-- Có thể mở rộng bằng mô hình Page Object, chụp ảnh màn hình khi test thất bại và chạy test song song.
-
-## 14. Tài liệu tham khảo
+## 11. Tài liệu tham khảo
 
 - <tên video / link hướng dẫn Selenium đã xem>
 - Tài liệu chính thức Selenium: https://www.selenium.dev/documentation/
