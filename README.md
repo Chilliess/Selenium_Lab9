@@ -2,6 +2,7 @@
 
 ## 1. Thông tin chung
 - **Sinh viên:** Phạm Tiến Chiêu
+- **Mã sinh viên:** 23010526
 - **Website kiểm thử:** https://www.saucedemo.com
 - **Công cụ chính:** Selenium WebDriver (Python)
 - **Số test case:** 6 (yêu cầu tối thiểu 5)
