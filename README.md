@@ -137,7 +137,9 @@ Tổng kết: **6 test case, 6 passed, 0 failed, thời gian chạy khoảng 26 
 
 ## 11. Tài liệu tham khảo
 
-- <tên video / link hướng dẫn Selenium đã xem>
+- Selenium Python Beginner Tutorial (playlist Selenium Python, Class Central): https://www.classcentral.com/classroom/youtube-selenium-python-54381
+- PyTest Tutorial - Selenium With Python - Learn PyTest in 90 Minutes (LambdaTest): https://www.classcentral.com/classroom/youtube-pytest-tutorial-selenium-with-python-learn-pytest-in-90-minutes-lambdatest-117675
+- Selenium Python Tutorial: Getting Started With Pytest: https://himanshu-sheth.medium.com/selenium-python-tutorial-getting-started-with-pytest-b596cebae876
 - Tài liệu chính thức Selenium: https://www.selenium.dev/documentation/
 - Tài liệu pytest: https://docs.pytest.org/
 - Website kiểm thử: https://www.saucedemo.com
